@@ -45,7 +45,9 @@ def back(a, b, c, d):
         error_j = error * weights[6] * output_j * (1 - output_j)
         error_i = error * weights[7] * output_i * (1 - output_i)
 
-        print('Errors for the hidden layers \n J:', error_j, '\n I:', error_i)
+        hidden_layer = numpy.array([error_j, error_i])
+
+        print('Updated hidden layers matrix:', hidden_layer)
 
         # delta weight updates
         # updated weights connected to j
